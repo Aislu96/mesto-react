@@ -1,5 +1,6 @@
 {
   "name": "mesto-react",
+  "homepage": "https://aislu96.github.io/mesto-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
