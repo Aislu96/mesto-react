@@ -8,7 +8,7 @@ function Card(props) {
     return (
         <article className="element">
             <img src={props.link} alt={props.name} className="element__image" onClick={handleClick}/>
-            <button type="button" className="element__delete" aria-label="Урна"></button>
+            <button type="button" className="element__delete" aria-label="Урна"/>
             <div className="element__group">
                 <h2 className="element__text">{props.name}</h2>
                 <div className="element__group_cards">

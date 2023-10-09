@@ -9,19 +9,19 @@ function Main(props) {
                 <div className="profile__container">
                     <img src={props.currentUser.avatar} alt="Жак-Ив Кусто на фоне моря смотрит в даль."
                          className="profile__avatar"/>
-                    <div className="profile__overlay">
-                        <img src={vector} onClick={props.onEditAvatar} className="profile__icon"
+                    <div className="profile__overlay" onClick={props.onEditAvatar}>
+                        <img src={vector} className="profile__icon"
                              alt="Иконка для редактирования"/>
                     </div>
                 </div>
                 <div className="profile__info">
                     <h1 className="profile__title">{props.currentUser.name}</h1>
                     <button type="button" onClick={props.onEditProfile} className="profile__edit-button"
-                            aria-label="Редактирование"></button>
+                            aria-label="Редактирование"/>
                     <p className="profile__subtitle">{props.currentUser.about}</p>
                 </div>
                 <button type="button" onClick={props.onAddPlace} className="profile__add-button"
-                        aria-label="Добавление"></button>
+                        aria-label="Добавление"/>
             </section>
 
             <section className="elements">
