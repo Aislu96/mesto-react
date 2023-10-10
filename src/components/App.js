@@ -25,21 +25,21 @@ function App() {
         }
     }
 
+    const isOpenPopup = isEditAvatarPopupOpen || isAddPlacePopupOpen || isEditProfilePopupOpen || setSelectedCard;
     useEffect(() => {
-        if (isEditAvatarPopupOpen || isAddPlacePopupOpen || isEditProfilePopupOpen) {
             function handleEscClose(evt) {
                 if (evt.key === "Escape") {
                     closeAllPopups();
                 }
             }
-
+        if (isOpenPopup) {
             document.addEventListener('keydown', handleEscClose);
 
             return () => {
                 document.removeEventListener('keydown', handleEscClose);
-            }
+            };
         }
-    })
+    }, [isOpenPopup]);
 
     useEffect(() => {
         Promise.all([api.getCards(), api.getUser()])
