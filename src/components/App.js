@@ -27,8 +27,8 @@ function App() {
 
     const isOpenPopup = isEditAvatarPopupOpen || isAddPlacePopupOpen || isEditProfilePopupOpen || setSelectedCard;
     useEffect(() => {
-            function handleEscClose(evt) {
-                if (evt.key === "Escape") {
+            function handleEscClose(e) {
+                if (e.key === "Escape") {
                     closeAllPopups();
                 }
             }
