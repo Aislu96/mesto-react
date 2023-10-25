@@ -1,9 +1,9 @@
 import React from "react";
 import PopupWithForm from "./PopupWithForm";
-import formValidation from "./formValidation";
+import useFormValidation from "./useFormValidation";
 
 function EditAvatarPopup(props) {
-    const {values, errors, handleChange, resetValidation, isValid} = formValidation({});
+    const {values, errors, handleChange, resetValidation, isValid} = useFormValidation({});
 
     React.useEffect(() => {
         resetValidation();

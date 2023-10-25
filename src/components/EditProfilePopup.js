@@ -1,9 +1,9 @@
 import React from "react";
 import PopupWithForm from "./PopupWithForm";
-import formValidation from "./formValidation";
+import useFormValidation from "./useFormValidation";
 
 function EditProfilePopup(props) {
-    const {values, errors, handleChange, setValues, resetValidation, isValid} = formValidation({});
+    const {values, errors, handleChange, setValues, resetValidation, isValid} = useFormValidation({});
 
     React.useEffect(() => {
         resetValidation();
