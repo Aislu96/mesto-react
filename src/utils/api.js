@@ -36,8 +36,8 @@ class Api {
             method: 'PATCH',
             headers: this.#headers,
             body: JSON.stringify({
-                name: data['input-name'],
-                about: data['input-job']
+                name: data.name,
+                about: data.about
             })
         });
     }
@@ -47,8 +47,8 @@ class Api {
             method: 'POST',
             headers: this.#headers,
             body: JSON.stringify({
-                name: data['input-username'],
-                link: data['input-url']
+                name: data.title,
+                link: data.link
             })
         })
     }
@@ -79,7 +79,7 @@ class Api {
             method: 'PATCH',
             headers: this.#headers,
             body: JSON.stringify({
-                avatar: data['input-url-avatar']
+                avatar: data.avatar
             })
         });
     }
