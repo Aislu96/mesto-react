@@ -10,7 +10,7 @@ function Main(props) {
         <main>
             <section className="profile">
                 <div className="profile__container">
-                    <img src={currentUser.avatar} alt="Жак-Ив Кусто на фоне моря смотрит в даль."
+                    <img src={currentUser.avatar} alt="Изображение аватара."
                          className="profile__avatar"/>
                     <div className="profile__overlay" onClick={props.onEditAvatar}>
                         <img src={vector} className="profile__icon"
